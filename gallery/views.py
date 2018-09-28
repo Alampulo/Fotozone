@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from .models import *
 from django.shortcuts import render,get_object_or_404
 
-# Create your views here.
+# Creating  views 
 def home(request):
     images = Image.objects.all()
     categories = Category.objects.all()
