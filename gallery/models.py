@@ -5,6 +5,7 @@ Default_desc = '''nothing that is good in life will ever come easy life is not a
 fally lover,
 n if u dunno now u know.
 hustle .'''
+
 class Category(models.Model):
     Name = models.CharField(max_length=30)
     @property
