@@ -34,7 +34,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'Fotozone',
-    'Bootstrap3',
+    'bootstrap3',
     'mathfilters',
     'django.contrib.admin',
     'django.contrib.auth',

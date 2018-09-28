@@ -1,12 +1,9 @@
 # FOTOZONE
-
-# Author
- Juma Bryan
-
-
 #### Description
 This is my personal gallery website where you can see photos that i have uploaded.
 
+# Author
+ Juma Bryan
 
 ## As A user you can :
 * View different photos that interest me.
