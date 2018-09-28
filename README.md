@@ -34,25 +34,25 @@ To access  this site Coding system  , you will need to:
   pip install -r requirements.txt
   ```
 3. Create database on psql shell
-  ```SQL
+
   psql
   CREATE DATABASE Fotozone;
-  ```
+
 4. Migrate the database and run the application
-  ```bash
+
   python manage.py migrate
   python manage.py runserver
-  ```
+
 
 ## Technologies Used
 * python3:Django
 * Flask :Jinja
-* HTML & css
+* HTML & CSS
 * Bootstrap
-* Herioku
+* Heroku
 * Git
 
-## Known Bugs.
+## Known Bugs
 * There are currently no known bugs. If you experience any feel free to open an issue
 or contact me personally.
 
