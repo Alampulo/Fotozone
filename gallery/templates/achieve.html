@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% load listslices %}
+{% block content %}
+
+<div class="splash">
+  <div class="text">
+    <div>Welcome To Imgshare</div>
+    <button class="btn btn-success"><a class="linkmain" href="#browse">Browse</a></button>
+  </div>
+</div>
+<div class="container" id="browse">
+  <fieldset class="row">
+    <legend>Gallery - {{name}}</legend>
+    <div class="images">
+        {% for imagepiece in images|pieces:4 %}
+        <div class="image">
+          {% for image in imagepiece %}
+            <img src='{{image.image.url}}' class="galleryitem" onclick="showinfo({{image.allinfo}})" width="100%">
+          {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+  </fieldset>
+</div>
+{% endblock %}
