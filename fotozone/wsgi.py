@@ -1,5 +1,5 @@
 """
-WSGI config for Fotozone project.
+WSGI config for fotozone project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Fotozone.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "fotozone.settings")
 
 application = get_wsgi_application()
