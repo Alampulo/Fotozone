@@ -5,8 +5,8 @@ from .models import Image,Category,Location
 def home(request):
 
     image = Image.get_images()
-    #     category_results = Category.objects.all()
-    #     location_results = Location.objects.all()
+        # category_results = Category.objects.all()
+        # location_results = Location.objects.all()
 
     return render(request,'All-images/welcome.html',{"image" : image})
 

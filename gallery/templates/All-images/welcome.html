@@ -5,37 +5,55 @@
 <div class="container" style="background-color: lightblack" id="yobra" >
     <div class="row">
         <!-- <p>{{gallery_item.image_name}}</p> -->
-          <p>  {% for gallery_item in image %}</p>
+           {% for gallery_item in image %}
             <div class="col-md-2" style="height:350px; width:350px;">
+            <img src="{{gallery_item.image_path.url}}" class="img-responsive" alt="" data-toggle="modal" data-target="#exampleModalCenter{{gallery_item.id}} ">
 
-
-            <!-- <img src="{{gallery_item.image_path.url}}" class="img-responsive" alt="" style="height:250px; width:350px; "> -->
-            <div class="w3-row-padding">
-              <div class="w3-container w3-third">
-                <img src="{{gallery_item.image_path.url}}" style="height:250px; width:350px;cursor:pointer;"
-                onclick="onClick(this)" class="w3-hover-opacity">
-              </div>
+            {%endfor%}
             </div>
+              
 
-            <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-              <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-              <div class="w3-modal-content w3-animate-zoom">
-                <img id="img01" style="width:100%">
-              </div>
-            </div>
 
-            <script>
-            function onClick(element) {
-              document.getElementById("img01").src = element.src;
-              document.getElementById("modal01").style.display = "block";
-            }
-            </script>
-
+              <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button> -->
+  {% for gallery_item in image %}
+  <!-- Modal -->
+  <div class="modal fade" id="#exampleModalCenter{{gallery_item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">{{gallery_item.image_name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-            {% empty %}
-            <h1>brian</h1>
-            {% endfor %}
-
+        <div class="modal-body">
+            <img src="{{gallery_item.image_path.url}}" class="img-responsive" alt="" data-toggle="modal" data-target="#exampleModalCenter{{gallery_item.id}} ">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
     </div>
+
+  </div>
+  
 </div>
-{% endblock %}
+
+
+
+  </div>
+  {%endfor%}
+
+  </div>
+  {%endblock%}
+
+
+
+     
+   
+    
+
