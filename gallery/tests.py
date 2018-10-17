@@ -24,7 +24,7 @@ class ImageTestClass(TestCase):
     # Set up method
     def setUp(self):
 #         self.location= Location(location = 'westcoast')
-        self.location.save_location()
+#         self.location.save_location()
 
         self.new_category = Category(category = 'legend')
         self.new_category.save(
