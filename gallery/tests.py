@@ -6,7 +6,7 @@ class CategoryTestClass(TestCase):
 
     # Set up method
     def setUp(self):
-        self.category= Category(category = 'Shepherd')
+        self.category= Category(category = 'war')
 
     # Testing  instance
     def test_instance(self):
@@ -23,8 +23,8 @@ class ImageTestClass(TestCase):
 
     # Set up method
     def setUp(self):
-        self.location= Location(location = 'France')
+#         self.location= Location(location = 'westcoast')
         self.location.save_location()
 
-        self.new_category = Category(category = 'Shepherd')
+        self.new_category = Category(category = 'legend')
         self.new_category.save(
