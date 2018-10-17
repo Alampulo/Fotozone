@@ -66,6 +66,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 INSTALLED_APPS = [
     'bootstrap3',
+    'bootstrap4',
     'gallery.apps.GalleryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
